@@ -1,0 +1,24 @@
+{
+    "name": "botnyx/sfe-backend-js",
+    "description": "sfe core javascript library.",
+    "keywords": ["sfe", "composer", "library"],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jerry Hopper",
+            "email": "hopper.jerry@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "botnyx/sfe-backend-core": "^0.1"
+    },
+    "require-dev": {
+		    "phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Botnyx\\Sfe\\Javascript\\": "src/"
+        }
+    }
+}
