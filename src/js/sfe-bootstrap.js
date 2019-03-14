@@ -18,7 +18,7 @@ sfe.e.loadCfgError = function(){
 }
 
 
-{{ include("js/sw/sw.js" )}}
+{{ include("jxs/sw/sw.js" )}}
 
 
 
