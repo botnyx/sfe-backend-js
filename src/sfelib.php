@@ -12,7 +12,7 @@ class sfelib {
 		
 		
 		$filePath = $root."/vendor/botnyx/sfe-backend-js/src";
-		$CacheDir = $temp."/sfe-js";
+		$CacheDir = false;//$temp."/sfe-js";
 		
 		//$cdnHost = $paths['cdn'];
 		//$backendHost = $paths['url'];
@@ -21,7 +21,7 @@ class sfelib {
 		
 		$loader = new \Twig\Loader\FilesystemLoader($filePath);
 		$this->twig = new \Twig\Environment($loader, [
-			'cache' => false/*$CacheDir,*/
+			'cache' => $CacheDir
 		]);
 
 		
