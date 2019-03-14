@@ -1,10 +1,12 @@
+{{ client_id }}
+
 
 var sfe = {}
 sfe.vars={}
 sfe.vars.config={}
 sfe.vars.headers={}
 
-{{ include("url/url.js") }}
+{{ include("js/url/url.js") }}
 
 
 sfe.e = {};
@@ -13,7 +15,7 @@ sfe.e.loadCfgError = function(){
 }
 
 
-{{ include("sw/sw.js" )}}
+{{ include("js/sw/sw.js" )}}
 
 
 

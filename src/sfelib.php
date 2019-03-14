@@ -8,26 +8,29 @@ namespace Botnyx\Sfe\Javascript;
 class sfelib {
 	
 	
-	function __construct($root,$tmp=false){
-		
-		$root;
-		if( $tmp==false){
-			$tmp = sys_get_temp_dir();
-		}
+	function __construct($root,$temp){
 		
 		
+		$filePath = $root."/vendor/botnyx/sfe-backend-js/src";
+		$CacheDir = $temp."/sfe-js";
 		
-		$loader = new \Twig\Loader\FilesystemLoader($root."/vendor/botnyx/sfe-backend-js/src/sfe/");
+		//$cdnHost = $paths['cdn'];
+		//$backendHost = $paths['url'];
+		//gmdate('D, d M Y H:i:s T', $time)
+		
+		
+		$loader = new \Twig\Loader\FilesystemLoader($filePath);
 		$this->twig = new \Twig\Environment($loader, [
-			'cache' => $tmp.'/sfe-js',
+			'cache' => false/*$CacheDir,*/
 		]);
 
 		
 		
 	}
 	
-	function get ($array=array()){
-		return $this->twig->render('sfe.js', $array );
+	function get ($path,$array=array()){
+		//die($path);
+		return $this->twig->render($path, $array );
 	}
 	
 	
