@@ -2,25 +2,36 @@
 	{{ client_id }}
 */
 
+{{ include("js/fe_utils_locationhash.js") }}
 
+{{ include("js/fe_click_helper.js") }}
+
+
+{{ include("js/appusers.js") }}
 
 var sfe = {}
 sfe.vars={}
 sfe.vars.config={}
 sfe.vars.headers={}
 
+/* url section */
 {{ include("js/url/url.js") }}
 
+/* url section */
+{{ include("js/f/f.js") }}
 
+
+/* error section */
 sfe.e = {};
 sfe.e.loadCfgError = function(){
 	
 }
 
+/* serviceworker */
+{{ include("js/sw/sw.js" )}}
 
-{{ include("jxs/sw/sw.js" )}}
-
-
+/* serviceworker */
+{{ include("js/init.js" )}}
 
 	
 function test2(){
@@ -135,7 +146,7 @@ function testje(){
 		// Use the window load event to keep the page load performant
 		window.addEventListener('load', () => {
 			//navigator.serviceWorker.register('/sw.js');
-			navigator.serviceWorker.register('/sw.js'/*,{scope: 'sw-test'}*/).then(function(registration){
+			navigator.serviceWorker.register('/a/js/sfe-sw.js'/*,{scope: 'sw-test'}*/).then(function(registration){
 				// registration worked
 				console.log('swRegistration Succeeded.');
 				sfe.f.swreg = registration

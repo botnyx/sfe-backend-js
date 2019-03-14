@@ -1,0 +1,1 @@
+{{ include("serviceworker/sw.js")}}
