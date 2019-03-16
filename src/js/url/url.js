@@ -40,25 +40,27 @@ sfe.url.options = function(){
 	  headers: {
 		'Accept': 'text/html',
 		'Content-Type': 'text/html',
-		'Origin': 'devpoc.nl',
+		/*'Origin': 'devpoc.nl',
 		'Host': 'backend.devpoc.nl',
-		'Authorization': 'Bearer '+sfe.vars.headers.authorization
+		'Authorization': 'Bearer '+sfe.vars.headers.authorization*/
 	  }
 	}
 	return options
 }
 
 sfe.url.get = function(url){
+	console.log("sfe.url.get");
 	var options = sfe.url.options()
 	options.method='GET'
 	options.headers['Accept']='text/html'
 	options.headers['Content-Type']='text/html'
-	options.headers['Origin']='https://devpoc.nl/'
-	options.headers['Referer']='https://devpoc.nl/'
+	//options.headers['Origin']='https://devpoc.nl/'
+	//options.headers['Referer']='https://devpoc.nl/'
 	
 	return fetch(url,options).then(response => response.text());
 }
 sfe.url.getJson = function(url){
+	console.log("sfe.url.getJson");
 	var options = sfe.url.options()
 	options.method='GET'
 	options.headers['Accept']='application/json'
@@ -66,10 +68,11 @@ sfe.url.getJson = function(url){
 	return fetch(url,options).then(response => response.json());
 }
 sfe.url.getTest = function(url){
+	console.log("sfe.url.getTest");
 	var options = sfe.url.testoptions()
 	options.method='GET'
-	options.headers['Accept']='application/json'
-	options.headers['Content-Type']='application/json'
+	//options.headers['Accept']='application/json'
+	//options.headers['Content-Type']='application/json'
 	//options.headers['Origin']='https://lookup.devpoc.nl'
 	return fetch(url,options).then(response => response);
 }

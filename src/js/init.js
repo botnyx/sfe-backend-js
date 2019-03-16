@@ -176,15 +176,15 @@ sfe.init = function(options={}){
 	}).then(function(result){
 		//console.log(result)
 		console.log("*-AUTH---------------------------------------------------------------------*")
-		var appUsers = new appusers('test');
-		var usersArray = appUsers.getAppIdentities();
+		//var appUsers = new appusers('test');
+		//var usersArray = appUsers.getAppIdentities();
 		
 		
-		if(usersArray.length ===0){
-		   console.log("no users found.");
-		}else{
-		   console.log("some users found.");
-		}
+		//if(usersArray.length ===0){
+		//   console.log("no users found.");
+		//}else{
+		//   console.log("some users found.");
+		//}
 		
 		
 		/* put bodyHtml in variables and discard other shit */

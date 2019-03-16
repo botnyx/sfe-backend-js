@@ -8,7 +8,6 @@ importScripts('https://cdn.devpoc.nl/assets/js/dfahlander/dexie.js/Dexie.js-2.0.
 
 
 
-
 var sfw = {};
 sfw.sw = {};
 
